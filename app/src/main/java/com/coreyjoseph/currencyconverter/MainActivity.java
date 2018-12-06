@@ -16,14 +16,14 @@ public class MainActivity extends AppCompatActivity {
            changeRate = 2.7;
 
             EditText edit= new EditText(this);
-            edit.setRawInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL );
+
             EditText numberText = (EditText) findViewById(R.id.numberText);
 
             double numText = Double.parseDouble(numberText.getText().toString());
             double conExchange = numText*changeRate;
 
 
-            Toast.makeText(MainActivity.this, "$" + conExchange,Toast.LENGTH_LONG). show();
+            Toast.makeText(MainActivity.this, "$" +  String.format("%.2f", conExchange),Toast.LENGTH_LONG). show();
         }
 
     @Override
